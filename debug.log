@@ -5343,3 +5343,25 @@ Watching for file changes with StatReloader
 "GET /static/manifest.json HTTP/1.1" 304 0
 "GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
 "GET /register/ HTTP/1.1" 200 15757
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
