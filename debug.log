@@ -5096,3 +5096,250 @@ Watching for file changes with StatReloader
 "GET /static/wel.png HTTP/1.1" 304 0
 "GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
 "GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"GET /static/logo.png HTTP/1.1" 304 0
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=9NfgHJGzaXtBPwpc&code=4%2F0Ab32j930ina-hNia_arHAjMF64chl3CERd8GhO46Pua93QjQbr_SbVGh3mjrVu_W_fIgwg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 30137
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1915
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 179
+"GET / HTTP/1.1" 200 7326
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 200 82729
+Not Found: /static/favicon/favicon.png
+"GET /static/favicon/favicon.png HTTP/1.1" 404 179
+"GET /static/manifest.json HTTP/1.1" 200 274
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 200 2426
+"GET /static/service-worker.js HTTP/1.1" 200 624
+"GET / HTTP/1.1" 200 7326
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 200 39106
+"GET /register/ HTTP/1.1" 200 15729
+"POST /register/ HTTP/1.1" 200 16236
+"GET /static/logo.png HTTP/1.1" 304 0
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\__init__.py", line 121, in login
+    backend = backend or user.backend
+                         ^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 560, in register_view
+    login(request, user)
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\__init__.py", line 127, in login
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: You have multiple authentication backends configured and therefore must provide the `backend` argument or set the `backend` attribute on the user.
+"POST /register/ HTTP/1.1" 500 145
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 179
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 15729
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\__init__.py", line 121, in login
+    backend = backend or user.backend
+                         ^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 560, in register_view
+    login(request, user)
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\__init__.py", line 127, in login
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: You have multiple authentication backends configured and therefore must provide the `backend` argument or set the `backend` attribute on the user.
+"POST /register/ HTTP/1.1" 500 87529
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /register/ HTTP/1.1" 200 16453
+"GET /static/logo.png HTTP/1.1" 304 0
+"POST /register/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 7644
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"POST /profile-setup/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14014
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15319
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 15738
+"POST /register/ HTTP/1.1" 200 16227
+"GET /static/logo.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12259
+"POST /register/ HTTP/1.1" 200 16227
+"GET /static/logo.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12259
+"POST /register/ HTTP/1.1" 200 16202
+"GET /static/logo.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12259
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"POST /register/ HTTP/1.1" 200 16202
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12259
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 7326
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 15713
+"POST /register/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 6705
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"POST /profile-setup/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14014
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15319
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 15757
+"POST /register/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 6701
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"POST /profile-setup/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15319
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 15757
