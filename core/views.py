@@ -549,21 +549,55 @@ def login_view(request):
         form = LoginForm()
     return render(request, 'auth/login.html', {'form': form})
 
+
+# def register_view(request):
+#     if request.user.is_authenticated:
+#         return redirect('home')
+    
+#     if request.method == 'POST':
+#         form = RegisterForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+
+#             # FIX: Specify the backend
+#             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+
+#             messages.success(request, f'Registration successful! Welcome, {user.username}!')
+#             return redirect('profile_setup')
+
+#         messages.error(request, 'Please correct the errors below.')
+#     else:
+#         form = RegisterForm()
+
+#     return render(request, 'auth/register.html', {'form': form})
+
+from datetime import date
+from dateutil.relativedelta import relativedelta
+
 def register_view(request):
     if request.user.is_authenticated:
         return redirect('home')
-    
+
+    # Calculate min age = 3 years old
+    today_minus_3 = date.today() - relativedelta(years=3)
+
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             messages.success(request, f'Registration successful! Welcome, {user.username}!')
             return redirect('profile_setup')
         messages.error(request, 'Please correct the errors below.')
     else:
         form = RegisterForm()
-    return render(request, 'auth/register.html', {'form': form})
+
+    return render(request, 'auth/register.html', {
+        'form': form,
+        'today_minus_3': today_minus_3.isoformat()
+    })
+
+
 
 @login_required
 @never_cache
