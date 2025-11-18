@@ -118,17 +118,17 @@ class ProfileSetupForm(forms.ModelForm):
         widget=forms.HiddenInput
     )
     
-    # Add date_of_birth field if profile doesn't have it
-    # date_of_birth = forms.DateField(
-    #     label="Date of Birth",
-    #     widget=forms.DateInput(attrs={
-    #         'class': 'form-control',
-    #         'type': 'date',
-    #         'required': False  # Not required if already set
-    #     }),
-    #     required=False,
-    #     help_text="We use this to provide age-appropriate games for you!"
-    # )
+    #Add date_of_birth field if profile doesn't have it
+    date_of_birth = forms.DateField(
+        label="Date of Birth",
+        widget=forms.DateInput(attrs={
+            'class': 'form-control',
+            'type': 'date',
+            'required': False  # Not required if already set
+        }),
+        required=False,
+        help_text="We use this to provide age-appropriate games for you!"
+    )
 
     class Meta:
         model = UserProfile
@@ -139,9 +139,9 @@ class ProfileSetupForm(forms.ModelForm):
         instance = kwargs.get('instance', None)
         super().__init__(*args, **kwargs)
         
-        # If profile doesn't have date_of_birth, make it required
-        # if instance and not instance.date_of_birth:
-        #     self.fields['date_of_birth'].required = True
+        #If profile doesn't have date_of_birth, make it required
+        if instance and not instance.date_of_birth:
+            self.fields['date_of_birth'].required = True
 
     def save(self, commit=True):
         instance = super().save(commit=False)
@@ -151,10 +151,10 @@ class ProfileSetupForm(forms.ModelForm):
         # Set preset avatar to match attribute name in model
         instance.preset_avatar = self.cleaned_data['selected_avatar']
         
-        # Save date_of_birth if provided and not already set
-        # if 'date_of_birth' in self.cleaned_data and self.cleaned_data['date_of_birth']:
-        #     if not instance.date_of_birth:
-        #         instance.date_of_birth = self.cleaned_data['date_of_birth']
+        #Save date_of_birth if provided and not already set
+        if 'date_of_birth' in self.cleaned_data and self.cleaned_data['date_of_birth']:
+            if not instance.date_of_birth:
+                instance.date_of_birth = self.cleaned_data['date_of_birth']
 
         instance.profile_completed = True
 
