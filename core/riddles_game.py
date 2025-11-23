@@ -9,7 +9,7 @@ from django.shortcuts import render
 from .ai_question_generator import generate_ai_question, create_unique_fallback_question
 
 def quizes(request):
-    return render(request, 'quizes/quizes.html')    
+    return render(request, 'quizes/riddles.html')    
 
 def get_quiz_level(request):
     """Get quiz questions for a specific level, mixing AI and database questions"""
