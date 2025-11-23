@@ -436,39 +436,90 @@
             }
         }
 
-        // Load current question
-        function loadQuestion() {
-            if (currentQuestionIndex >= questions.length) {
-                levelComplete();
-                return;
-            }
-            
-            const question = questions[currentQuestionIndex];
-            selectedOption = null;
-            
-            elements.questionText.textContent = question.question_text;
-            elements.optionsContainer.innerHTML = '';
-            elements.feedback.textContent = '';
-            elements.explanation.classList.add('hidden');
-            elements.nextBtn.classList.add('hidden');
-            
-            updateProgress();
-            
-            // Create option buttons
-            question.options.forEach(option => {
-                const button = document.createElement('button');
-                button.className = 'option-button w-full';
-                button.innerHTML = `
-                    <span class="option-letter">${option.letter}</span>
-                    ${option.text}
-                `;
-                button.addEventListener('click', () => selectOption(option.letter, button));
-                elements.optionsContainer.appendChild(button);
-            });
-            
-            // Update tip
-            updateTip();
+    // Load current question
+    function loadQuestion() {
+        if (currentQuestionIndex >= questions.length) {
+            levelComplete();
+            return;
         }
+        
+        const question = questions[currentQuestionIndex];
+        selectedOption = null;
+        
+        // Clear previous question state
+        elements.questionText.textContent = question.question_text;
+        elements.optionsContainer.innerHTML = ''; // This clears previous options
+        elements.feedback.textContent = '';
+        elements.explanation.classList.add('hidden');
+        elements.nextBtn.classList.add('hidden');
+        
+        // Remove any residual classes from options container
+        elements.optionsContainer.className = 'space-y-3';
+        
+        // Add AI indicator if it's an AI-generated question
+        if (question.is_ai) {
+            elements.questionText.innerHTML = question.question_text + ' <span class="text-xs text-blue-500">(AI Generated)</span>';
+        }
+        
+        updateProgress();
+        
+        // Create option buttons
+        const optionLetters = ['A', 'B', 'C', 'D'];
+        question.options.forEach((option, index) => {
+            const button = document.createElement('button');
+            button.className = 'option-button w-full';
+            button.innerHTML = `
+                <span class="option-letter">${optionLetters[index]}</span>
+                ${option.text || option} <!-- Handle both object and string formats -->
+            `;
+            button.addEventListener('click', () => selectOption(optionLetters[index], button));
+            elements.optionsContainer.appendChild(button);
+        });
+        
+        // Reset any selected state
+        const buttons = elements.optionsContainer.querySelectorAll('.option-button');
+        buttons.forEach(btn => {
+            btn.classList.remove('selected', 'correct', 'incorrect');
+            btn.style.pointerEvents = 'auto';
+        });
+        
+        // Update tip
+        updateTip();
+    }
+
+        // Load current question
+        // function loadQuestion() {
+        //     if (currentQuestionIndex >= questions.length) {
+        //         levelComplete();
+        //         return;
+        //     }
+            
+        //     const question = questions[currentQuestionIndex];
+        //     selectedOption = null;
+            
+        //     elements.questionText.textContent = question.question_text;
+        //     elements.optionsContainer.innerHTML = '';
+        //     elements.feedback.textContent = '';
+        //     elements.explanation.classList.add('hidden');
+        //     elements.nextBtn.classList.add('hidden');
+            
+        //     updateProgress();
+            
+        //     // Create option buttons
+        //     question.options.forEach(option => {
+        //         const button = document.createElement('button');
+        //         button.className = 'option-button w-full';
+        //         button.innerHTML = `
+        //             <span class="option-letter">${option.letter}</span>
+        //             ${option.text}
+        //         `;
+        //         button.addEventListener('click', () => selectOption(option.letter, button));
+        //         elements.optionsContainer.appendChild(button);
+        //     });
+            
+        //     // Update tip
+        //     updateTip();
+        // }
 
         // Select option
         function selectOption(optionLetter, button) {
@@ -483,6 +534,7 @@
             selectedOption = optionLetter;
         }
 
+        // Submit answer
         // Submit answer
         function submitAnswer() {
             if (!gameActive || !selectedOption) {
@@ -499,6 +551,12 @@
                 answeredQuestionIds.push(question.id);
             }
             
+            // Disable all buttons immediately after submission
+            const buttons = elements.optionsContainer.querySelectorAll('.option-button');
+            buttons.forEach(btn => {
+                btn.style.pointerEvents = 'none';
+            });
+            
             if (isCorrect) {
                 correctAnswers++;
                 currentStreak++;
@@ -514,7 +572,6 @@
                 createConfetti();
                 
                 // Mark correct answer
-                const buttons = elements.optionsContainer.querySelectorAll('.option-button');
                 buttons.forEach(button => {
                     const letter = button.querySelector('.option-letter').textContent;
                     if (letter === question.correct_option) {
@@ -528,7 +585,6 @@
                 playSound(wrongSound);
                 
                 // Mark correct and incorrect answers
-                const buttons = elements.optionsContainer.querySelectorAll('.option-button');
                 buttons.forEach(button => {
                     const letter = button.querySelector('.option-letter').textContent;
                     if (letter === question.correct_option) {
@@ -544,10 +600,6 @@
                 elements.explanationText.textContent = question.explanation;
                 elements.explanation.classList.remove('hidden');
             }
-            
-            // Disable all buttons
-            const buttons = elements.optionsContainer.querySelectorAll('.option-button');
-            buttons.forEach(btn => btn.style.pointerEvents = 'none');
             
             elements.nextBtn.classList.remove('hidden');
             updateProgress();
@@ -567,6 +619,11 @@
 
         // Next question
         function nextQuestion() {
+            // Clear any existing feedback and reset state
+            elements.feedback.textContent = '';
+            elements.explanation.classList.add('hidden');
+            elements.nextBtn.classList.add('hidden');
+            
             currentQuestionIndex++;
             loadQuestion();
         }
@@ -746,6 +803,29 @@
 
         // Initialize game when page loads
         window.addEventListener('DOMContentLoaded', initGame);
+
+        // Load next question
+        async function loadNextQuestion() {
+            const res = await fetch("/api/get-next-question/");
+            const data = await res.json();
+
+            document.getElementById("question").innerText = data.question;
+
+            const optionsDiv = document.getElementById("options");
+            optionsDiv.innerHTML = "";
+
+            data.options.forEach(opt => {
+                const btn = document.createElement("button");
+                btn.innerText = opt;
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        // Initialize game
+        window.addEventListener("DOMContentLoaded", () => {
+            loadNextQuestion();
+        });
+
     </script>
 </body>
 </html>

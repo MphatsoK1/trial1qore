@@ -16,6 +16,8 @@ import uuid
 from .forms import *
 from .models import *
 from .game_utils import filter_by_age_appropriate, get_age_from_birthdate, get_difficulty_by_age
+from datetime import date
+from dateutil.relativedelta import relativedelta
 
 logger = logging.getLogger(__name__)
 
@@ -570,9 +572,6 @@ def login_view(request):
 #         form = RegisterForm()
 
 #     return render(request, 'auth/register.html', {'form': form})
-
-from datetime import date
-from dateutil.relativedelta import relativedelta
 
 def register_view(request):
     if request.user.is_authenticated:

@@ -5365,3 +5365,1134 @@ C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms
 Watching for file changes with StatReloader
 C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=SxVj5OAtnFjVyHJN&code=4%2F0Ab32j91nmyYNUBtXLbRHt-NDiIoMKE0TmnmFg4Su-r7NXp8KYBRvBm4vpbU3ZGNRYR4SvQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 30848
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1768
+Internal Server Error: /api/get-next-question/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\quiz_game.py", line 246, in get_next_question
+    question_data = generate_ai_question(
+        difficulty=difficulty,
+        age=user.profile.age if hasattr(user, "profile") else 10,
+        topic="mathematics"  # can change dynamically
+    )
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py", line 22, in generate_ai_question
+    response = client.chat.completions.create(
+        model="llama3-8b-8192",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.5
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\resources\chat\completions.py", line 464, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+"GET /api/get-next-question/ HTTP/1.1" 500 107625
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=19,54,48,32,59 HTTP/1.1" 200 1746
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=19,54,48,32,59,30,46,2,29,16 HTTP/1.1" 200 1727
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=19,54,48,32,59,30,46,2,29,16 HTTP/1.1" 200 1879
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 30848
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1804
+Internal Server Error: /api/get-next-question/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\quiz_game.py", line 246, in get_next_question
+    question_data = generate_ai_question(
+        difficulty=difficulty,
+        age=user.profile.age if hasattr(user, "profile") else 10,
+        topic="mathematics"  # can change dynamically
+    )
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py", line 22, in generate_ai_question
+    response = client.chat.completions.create(
+        model="llama3-8b-8192",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.5
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\resources\chat\completions.py", line 464, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+"GET /api/get-next-question/ HTTP/1.1" 500 107625
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=39,9,52,31,13 HTTP/1.1" 200 1760
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=39,9,52,31,13,4,10,53,36,47 HTTP/1.1" 200 1702
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=39,9,52,31,13,4,10,53,36,47,12,14,32,49,8 HTTP/1.1" 200 1831
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\quiz_game.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 32175
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1823
+"GET /api/get-next-question/ HTTP/1.1" 200 143
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"GET /quizes/ HTTP/1.1" 200 32175
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1748
+"GET /api/get-next-question/ HTTP/1.1" 200 143
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 32175
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1739
+"GET /api/get-next-question/ HTTP/1.1" 200 320
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"GET /quizes/ HTTP/1.1" 200 32175
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1807
+"GET /api/get-next-question/ HTTP/1.1" 200 270
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 32373
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1787
+"GET /api/get-next-question/ HTTP/1.1" 200 457
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=36,16,14,21,1 HTTP/1.1" 200 1980
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/level/?level=3&answered_ids=36,16,14,21,1,53,23,12,5,7 HTTP/1.1" 200 1881
+"GET /quizes/ HTTP/1.1" 200 32373
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1894
+"GET /api/get-next-question/ HTTP/1.1" 200 324
+"GET /quizes/ HTTP/1.1" 200 32373
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1869
+"GET /api/get-next-question/ HTTP/1.1" 200 383
+"GET /quizes/ HTTP/1.1" 200 32373
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1918
+"GET /api/get-next-question/ HTTP/1.1" 200 346
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=52,41,26,35,45 HTTP/1.1" 200 1916
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=52,41,26,35,45,42,25,31,18,54 HTTP/1.1" 200 1898
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=52,41,26,35,45,42,25,31,18,54,44,4 HTTP/1.1" 200 1859
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33079
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1915
+"GET /api/get-next-question/ HTTP/1.1" 200 383
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=58,51,52,12,22 HTTP/1.1" 200 1889
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=58,51,52,12,22,30,43,36,29,54 HTTP/1.1" 200 1846
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=58,51,52,12,22,30,43,36,29,54,33,26,10,20,5 HTTP/1.1" 200 1987
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1936
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=38,23,9,18,7 HTTP/1.1" 200 1805
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=38,23,9,18,7,33,35,42,30,37 HTTP/1.1" 200 1808
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=38,23,9,18,7,33,35,42,30,37,34,40,32,15,54 HTTP/1.1" 200 1816
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+Watching for file changes with StatReloader
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33079
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 359
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1840
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=fallback_1_0,fallback_1_1,fallback_1_2,fallback_1_3,fallback_1_4 HTTP/1.1" 200 1841
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=fallback_1_0,fallback_1_1,fallback_1_2,fallback_1_3,fallback_1_4,fallback_2_0,fallback_2_1,fallback_2_2,fallback_2_3,fallback_2_4 HTTP/1.1" 200 1845
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=fallback_1_0,fallback_1_1,fallback_1_2,fallback_1_3,fallback_1_4,fallback_2_0,fallback_2_1,fallback_2_2,fallback_2_3,fallback_2_4,fallback_3_0 HTTP/1.1" 200 1858
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\quiz_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33079
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 395
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2534
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_6203,ai_1_1_5152,ai_1_2_4660,ai_1_3_4508,ai_1_4_2850 HTTP/1.1" 200 3495
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_6203,ai_1_1_5152,ai_1_2_4660,ai_1_3_4508,ai_1_4_2850,ai_2_0_5562 HTTP/1.1" 200 4566
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_6203,ai_1_1_5152,ai_1_2_4660,ai_1_3_4508,ai_1_4_2850,ai_2_0_5562,ai_3_0_7409,ai_3_1_2034,ai_3_2_3967,ai_3_3_4353,ai_3_4_6432 HTTP/1.1" 200 3728
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33079
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 334
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2746
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_2565,ai_1_1_9229,ai_1_2_5069,ai_1_3_7596,ai_1_4_1397 HTTP/1.1" 200 3691
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_2565,ai_1_1_9229,ai_1_2_5069,ai_1_3_7596,ai_1_4_1397,ai_2_0_3994,ai_2_1_4049,ai_2_2_6866,ai_2_3_2997,ai_2_4_4251 HTTP/1.1" 200 3619
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_2565,ai_1_1_9229,ai_1_2_5069,ai_1_3_7596,ai_1_4_1397,ai_2_0_3994,ai_2_1_4049,ai_2_2_6866,ai_2_3_2997,ai_2_4_4251,ai_3_0_2629,ai_3_1_4758,ai_3_2_4786,ai_3_3_3076,ai_3_4_9847 HTTP/1.1" 200 3505
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /profile/ HTTP/1.1" 302 0
+"GET /login/?next=/profile/ HTTP/1.1" 200 15118
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/?next=/profile/ HTTP/1.1" 200 15075
+"POST /login/?next=/profile/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 332
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2401
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_8236,ai_1_1_2585,ai_1_2_5880,ai_1_3_8037,ai_1_4_9704 HTTP/1.1" 200 2365
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_8236,ai_1_1_2585,ai_1_2_5880,ai_1_3_8037,ai_1_4_9704,ai_2_0_9535,ai_2_1_4449,ai_2_2_4911,ai_2_3_3387 HTTP/1.1" 200 2619
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_8236,ai_1_1_2585,ai_1_2_5880,ai_1_3_8037,ai_1_4_9704,ai_2_0_9535,ai_2_1_4449,ai_2_2_4911,ai_2_3_3387,ai_3_0_9286,ai_3_1_6271,ai_3_2_6696,ai_3_3_6490,ai_3_4_3045 HTTP/1.1" 200 2387
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2200
+"GET /home/ HTTP/1.1" 200 14012
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 314
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2519
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_1251,ai_1_1_1224,ai_1_2_8671,ai_1_3_3093,ai_1_4_9967 HTTP/1.1" 200 2393
+"GET /home/ HTTP/1.1" 200 14012
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15084
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 319
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2168
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=23,17,ai_1_1_9291,21,ai_1_0_2705 HTTP/1.1" 200 2002
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=23,17,ai_1_1_9291,21,ai_1_0_2705,3,1,ai_2_0_4271,16 HTTP/1.1" 200 1846
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=23,17,ai_1_1_9291,21,ai_1_0_2705,3,1,ai_2_0_4271,16,19,24,ai_3_1_1361,ai_3_0_5830 HTTP/1.1" 200 2098
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1889
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=15,23,13,17,ai_1_4_8593 HTTP/1.1" 200 1862
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=15,23,13,17,ai_1_4_8593,2,20,1 HTTP/1.1" 200 1926
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=15,23,13,17,ai_1_4_8593,2,20,1,3,ai_3_2_8873,ai_3_1_5634 HTTP/1.1" 200 2004
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2091
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_9233,20,23 HTTP/1.1" 200 2069
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_9233,20,23,19,16,ai_2_4_2593 HTTP/1.1" 200 2412
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_9233,20,23,19,16,ai_2_4_2593,ai_3_3_3446 HTTP/1.1" 200 2484
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 454
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2018
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /artificial-intelligence/ HTTP/1.1" 200 18133
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /profile/ HTTP/1.1" 200 23742
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET /home/ HTTP/1.1" 302 0
+"GET /login/?next=/home/ HTTP/1.1" 200 15100
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/?next=/home/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/yay.mp3 HTTP/1.1" 304 0
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1787
+"GET /api/get-next-question/ HTTP/1.1" 200 114
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"GET /home/ HTTP/1.1" 200 14012
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /static/sounds/yay.mp3 HTTP/1.1" 200 25920
+"GET /api/get-next-question/ HTTP/1.1" 200 114
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1784
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 114
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1916
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_1_3615,3,14,ai_1_0_6493,2 HTTP/1.1" 200 1889
+"GET /home/ HTTP/1.1" 200 14012
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 114
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1887
+"GET /quizes/ HTTP/1.1" 200 33078
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 114
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1907
+"GET /quizes/ HTTP/1.1" 200 33078
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 114
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1855
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_3_2269,13,ai_1_1_6514,15,23 HTTP/1.1" 200 1849
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_3_2269,13,ai_1_1_6514,15,23,22,20,ai_2_1_5343,16 HTTP/1.1" 200 1757
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_3_2269,13,ai_1_1_6514,15,23,22,20,ai_2_1_5343,16,ai_3_2_5577,ai_3_0_8331,3,24 HTTP/1.1" 200 1849
+"GET /home/ HTTP/1.1" 200 14012
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 280
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1778
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=19,13,22,14,17 HTTP/1.1" 200 1761
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home/ HTTP/1.1" 200 14012
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 280
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1789
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 337
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1993
+"GET /home/ HTTP/1.1" 200 14012
+"GET /quizes/ HTTP/1.1" 200 33078
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 321
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2110
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=14,3,ai_1_1_1802,23,ai_1_0_6478 HTTP/1.1" 200 1997
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=14,3,ai_1_1_1802,23,ai_1_0_6478,ai_2_1_2223,ai_2_0_1157,21,22 HTTP/1.1" 200 3324
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=14,3,ai_1_1_1802,23,ai_1_0_6478,ai_2_1_2223,ai_2_0_1157,21,22,17,ai_3_2_1336 HTTP/1.1" 200 2084
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2124
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_3_3708,22,15,1 HTTP/1.1" 200 1815
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_3_3708,22,15,1,20,21,24,17 HTTP/1.1" 200 2667
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+Internal Server Error: /api/get-next-question/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 980, in request
+    response = self._client.send(
+        request,
+        stream=stream or self._should_stream_response_body(request=request),
+        **kwargs,
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py", line 79, in generate_ai_question
+    response = client.chat.completions.create(
+        model=model,
+    ...<12 lines>...
+        response_format={"type": "json_object"}
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\resources\chat\completions.py", line 464, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 1012, in request
+    raise APIConnectionError(request=request) from err
+groq.APIConnectionError: Connection error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\quiz_game.py", line 387, in get_next_question
+    question_data = generate_ai_question(
+        difficulty=difficulty,
+        age=user.profile.age if hasattr(user, "profile") else 10,
+        topic="mathematics"  # can change dynamically
+    )
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py", line 127, in generate_ai_question
+    fallback_result = create_unique_fallback_question(level_number, index, difficulty, topic)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'create_unique_fallback_question' is not defined
+"GET /api/get-next-question/ HTTP/1.1" 500 208707
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1736
+- Broken pipe from ('127.0.0.1', 62737)
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /profile/ HTTP/1.1" 200 23742
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15302
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+Internal Server Error: /api/get-next-question/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 980, in request
+    response = self._client.send(
+        request,
+        stream=stream or self._should_stream_response_body(request=request),
+        **kwargs,
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py", line 79, in generate_ai_question
+    response = client.chat.completions.create(
+        model=model,
+    ...<12 lines>...
+        response_format={"type": "json_object"}
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\resources\chat\completions.py", line 464, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line 1012, in request
+    raise APIConnectionError(request=request) from err
+groq.APIConnectionError: Connection error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\quiz_game.py", line 387, in get_next_question
+    question_data = generate_ai_question(
+        difficulty=difficulty,
+        age=user.profile.age if hasattr(user, "profile") else 10,
+        topic="mathematics"  # can change dynamically
+    )
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py", line 127, in generate_ai_question
+    fallback_result = create_unique_fallback_question(level_number, index, difficulty, topic)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'create_unique_fallback_question' is not defined
+"GET /api/get-next-question/ HTTP/1.1" 500 208634
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1744
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\quiz_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home/ HTTP/1.1" 200 14012
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 529
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2481
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /profile/ HTTP/1.1" 200 23742
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15302
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 230
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2309
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_3953,ai_1_1_2016,ai_1_2_3544,ai_1_3_6880,ai_1_4_6369 HTTP/1.1" 200 2550
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_3953,ai_1_1_2016,ai_1_2_3544,ai_1_3_6880,ai_1_4_6369 HTTP/1.1" 200 2924
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_3953,ai_1_1_2016,ai_1_2_3544,ai_1_3_6880,ai_1_4_6369,ai_3_0_8830,ai_3_1_7735,ai_3_2_9763,ai_3_3_3327,ai_3_4_4196 HTTP/1.1" 200 2844
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 744
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2475
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 256
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2821
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_3229,ai_1_1_5152,ai_1_2_3346,ai_1_3_3685,ai_1_4_7144 HTTP/1.1" 200 2782
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_3229,ai_1_1_5152,ai_1_2_3346,ai_1_3_3685,ai_1_4_7144,ai_2_0_2226,ai_2_1_7737,ai_2_2_1209,ai_2_3_4546,ai_2_4_6461 HTTP/1.1" 200 3774
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_3229,ai_1_1_5152,ai_1_2_3346,ai_1_3_3685,ai_1_4_7144,ai_2_0_2226,ai_2_1_7737,ai_2_2_1209,ai_2_3_4546,ai_2_4_6461,ai_3_0_8204,ai_3_1_9002 HTTP/1.1" 200 3309
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2435
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_4508,ai_1_1_4946 HTTP/1.1" 200 1843
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1677
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 305
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1833
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14012
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 283
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1848
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 464
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1778
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1854
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /profile/ HTTP/1.1" 200 23742
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15302
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14012
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 298
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1811
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1677
+"GET /home/ HTTP/1.1" 200 14012
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1677
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1677
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 1677
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 487
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2099
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 390
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2325
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_9864,ai_1_1_9434,ai_1_2_5984,ai_1_3_4788,ai_1_4_9603 HTTP/1.1" 200 2423
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_9864,ai_1_1_9434,ai_1_2_5984,ai_1_3_4788,ai_1_4_9603,ai_2_0_8622,ai_2_1_2397,ai_2_2_2445,ai_2_3_5522,ai_2_4_5514 HTTP/1.1" 200 2726
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_9864,ai_1_1_9434,ai_1_2_5984,ai_1_3_4788,ai_1_4_9603,ai_2_0_8622,ai_2_1_2397,ai_2_2_2445,ai_2_3_5522,ai_2_4_5514,ai_3_0_2508,ai_3_1_7460,ai_3_2_7868,ai_3_3_5356 HTTP/1.1" 200 2611
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 319
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2304
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_question_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2115
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_8984,ai_1_1_6954,ai_1_2_5317,ai_1_3_4425,ai_1_4_8309 HTTP/1.1" 200 2671
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_8984,ai_1_1_6954,ai_1_2_5317,ai_1_3_4425,ai_1_4_8309,ai_2_0_3213,ai_2_1_7086,ai_2_3_6104,ai_2_4_2916 HTTP/1.1" 200 2384
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_8984,ai_1_1_6954,ai_1_2_5317,ai_1_3_4425,ai_1_4_8309,ai_2_0_3213,ai_2_1_7086,ai_2_3_6104,ai_2_4_2916,ai_3_0_9494,ai_3_1_1603,ai_3_2_7019 HTTP/1.1" 200 2401
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /profile/ HTTP/1.1" 200 23730
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15302
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=qke66EBf4SgK7x39&code=4%2F0Ab32j93sLD7E60zqSJMr1oyoWz-JqFUkh_6Of9NCrUz0jgEo9CQZ-xNYaqcZKGvPcPXcVg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33081
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 433
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2654
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12343
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/quizes/level/?level=2&answered_ids=ai_1_0_9167,ai_1_1_3745,ai_1_2_3914,ai_1_3_7359,ai_1_4_5408 HTTP/1.1" 200 3291
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/quizes/level/?level=3&answered_ids=ai_1_0_9167,ai_1_1_3745,ai_1_2_3914,ai_1_3_7359,ai_1_4_5408,ai_2_0_9017,ai_2_1_4776,ai_2_2_2114,ai_2_3_3690,ai_2_4_8248 HTTP/1.1" 200 4988
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+"GET /api/quizes/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/quizes/level/?level=4&answered_ids=ai_1_0_9167,ai_1_1_3745,ai_1_2_3914,ai_1_3_7359,ai_1_4_5408,ai_2_0_9017,ai_2_1_4776,ai_2_2_2114,ai_2_3_3690,ai_2_4_8248,ai_3_0_7618,ai_3_1_6366,ai_3_2_8196,ai_3_4_4449 HTTP/1.1" 200 3515
+"POST /api/quizes/update-progress/ HTTP/1.1" 200 21
+Not Found: /api/quizes/next-level/
+"GET /api/quizes/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /profile/ HTTP/1.1" 200 23763
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15317
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0

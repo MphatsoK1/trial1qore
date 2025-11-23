@@ -6,12 +6,13 @@ from django.views.decorators.http import require_http_methods
 from .models import QuizCategory, QuizQuestion, QuizLevel, QuizGameSession, UserQuizProgress
 from .game_utils import filter_by_age_appropriate, get_age_from_birthdate, get_difficulty_by_age
 from django.shortcuts import render
+from .ai_question_generator import generate_ai_question, create_unique_fallback_question
 
 def quizes(request):
-    return render(request, 'quizes/quizes.html')
+    return render(request, 'quizes/quizes.html')    
 
 def get_quiz_level(request):
-    """Get quiz questions for a specific level, filtered by user age"""
+    """Get quiz questions for a specific level, mixing AI and database questions"""
     level_number = int(request.GET.get('level', 1))
     
     # Get list of already answered question IDs to exclude
@@ -49,73 +50,214 @@ def get_quiz_level(request):
         if not categories_query.exists():
             categories_query = QuizCategory.objects.filter(pk=level.category.pk)
         
-        # Filter questions by age-appropriate category, excluding already answered questions
-        # This ensures questions from previous levels don't appear in new levels
+        # Get available database questions (excluding answered ones)
         questions_query = QuizQuestion.objects.filter(
             category__in=categories_query.values_list('pk', flat=True),
             is_active=True
         )
         
-        # Exclude already answered questions (from all previous levels)
-        # This prevents any question from appearing again in subsequent levels
+        # Exclude already answered questions
         if answered_ids:
             questions_query = questions_query.exclude(id__in=answered_ids)
         
-        # Get required number of questions, or all available if not enough
-        available_count = questions_query.count()
+        # Get available database questions
+        available_db_questions = list(questions_query.order_by('?'))  # Random order
+        available_count = len(available_db_questions)
         questions_needed = level.questions_required
         
-        if available_count < questions_needed:
-            # If we don't have enough new questions for this difficulty level,
-            # we need to either:
-            # 1. Use all available questions (including previously answered ones)
-            # 2. Or inform the user that more questions need to be added
-            # For now, we'll use all available questions to prevent errors
-            # But ideally, you should run: python manage.py seed_quizgame
-            # to add more questions for each difficulty level
-            remaining_questions = QuizQuestion.objects.filter(
-                category__in=categories_query.values_list('pk', flat=True),
-                is_active=True
-            ).exclude(id__in=answered_ids if answered_ids else [])
-            
-            if remaining_questions.count() > 0:
-                questions = remaining_questions.order_by('?')[:min(questions_needed, remaining_questions.count())]
-            else:
-                # All questions have been shown, reset for this difficulty
-                questions = QuizQuestion.objects.filter(
-                    category__in=categories_query.values_list('pk', flat=True),
-                    is_active=True
-                ).order_by('?')[:questions_needed]
-        else:
-            # Get random questions excluding already answered ones
-            questions = questions_query.order_by('?')[:questions_needed]
-        
         questions_data = []
-        for question in questions:
-            questions_data.append({
-                'id': question.id,
-                'question_text': question.question_text,
-                'options': question.get_options(),
-                'correct_option': question.correct_option,
-                'explanation': question.explanation,
-                'points': question.points
-            })
+        
+        # Define points based on difficulty
+        difficulty_points_map = {
+            'easy': 10,
+            'medium': 15,
+            'hard': 20,
+            'expert': 25
+        }
+        
+        current_difficulty = level.category.difficulty
+        points = difficulty_points_map.get(current_difficulty, 10)
+        
+        # Get category for AI questions context
+        category = categories_query.first()
+        topic = category.name if category else "general knowledge"
+        
+        # Get user age for AI question generation
+        user_age = 10  # default
+        if user and hasattr(user, 'profile') and user.profile.date_of_birth:
+            user_age = get_age_from_birthdate(user.profile.date_of_birth)
+        
+        # STRATEGY: Mix AI and database questions intelligently
+        # ai_questions_count = 0
+        # db_questions_count = 0
+        
+        # for i in range(questions_needed):
+        #     # Decide whether to use AI or database question (50/50 chance when both available)
+        #     use_ai = random.choice([True, False])
+            
+        #     # If we have database questions and (we choose to use them OR we're out of AI capacity)
+        #     if available_db_questions and (not use_ai or ai_questions_count >= questions_needed // 2):
+        #         # Use a database question
+        #         db_question = available_db_questions.pop(0)  # Take the first one
+        #         questions_data.append({
+        #             'id': db_question.id,
+        #             'question_text': db_question.question_text,
+        #             'options': db_question.get_options(),
+        #             'correct_option': db_question.correct_option,
+        #             'explanation': db_question.explanation,
+        #             'points': db_question.points,
+        #             'is_ai': False
+        #         })
+        #         db_questions_count += 1
+                
+        #     else:
+        #         # Use AI question
+        #         try:
+        #             ai_question = generate_ai_question(
+        #                 difficulty=current_difficulty,
+        #                 age=user_age,
+        #                 topic=topic,
+        #                 question_number=i + 1
+        #             )
+                    
+        #             questions_data.append({
+        #                 'id': f"ai_{level_number}_{i}_{random.randint(1000,9999)}",
+        #                 'question_text': ai_question['question'],
+        #                 'options': [
+        #                     {'letter': 'A', 'text': ai_question['options'][0]},
+        #                     {'letter': 'B', 'text': ai_question['options'][1]},
+        #                     {'letter': 'C', 'text': ai_question['options'][2]},
+        #                     {'letter': 'D', 'text': ai_question['options'][3]}
+        #                 ],
+        #                 'correct_option': ai_question['correct'],
+        #                 'explanation': ai_question['explanation'],
+        #                 'points': points,
+        #                 'is_ai': True
+        #             })
+        #             ai_questions_count += 1
+                    
+        #         except Exception as e:
+        #             print(f"Error generating AI question: {e}")
+        #             # If AI fails and we still have database questions, use them
+        #             if available_db_questions:
+        #                 db_question = available_db_questions.pop(0)
+        #                 questions_data.append({
+        #                     'id': db_question.id,
+        #                     'question_text': db_question.question_text,
+        #                     'options': db_question.get_options(),
+        #                     'correct_option': db_question.correct_option,
+        #                     'explanation': db_question.explanation,
+        #                     'points': db_question.points,
+        #                     'is_ai': False
+        #                 })
+        #                 db_questions_count += 1
+        #             else:
+        #                 # Last resort: use simple fallback
+        #                 questions_data.append(create_unique_fallback_question(level_number, i, current_difficulty, topic))
+
+        # STRATEGY: Use AI questions first, fallback to database questions when AI fails
+        ai_questions_count = 0
+        db_questions_count = 0
+
+        for i in range(questions_needed):
+            # Try AI question first
+            try:
+                ai_question = generate_ai_question(
+                    difficulty=current_difficulty,
+                    age=user_age,
+                    topic=topic,
+                    question_number=i + 1
+                )
+                
+                questions_data.append({
+                    'id': f"ai_{level_number}_{i}_{random.randint(1000,9999)}",
+                    'question_text': ai_question['question'],
+                    'options': [
+                        {'letter': 'A', 'text': ai_question['options'][0]},
+                        {'letter': 'B', 'text': ai_question['options'][1]},
+                        {'letter': 'C', 'text': ai_question['options'][2]},
+                        {'letter': 'D', 'text': ai_question['options'][3]}
+                    ],
+                    'correct_option': ai_question['correct'],
+                    'explanation': ai_question['explanation'],
+                    'points': points,
+                    'is_ai': True
+                })
+                ai_questions_count += 1
+                
+            except Exception as e:
+                print(f"Error generating AI question: {e}")
+                # AI failed, use database question as fallback
+                if available_db_questions:
+                    db_question = available_db_questions.pop(0)
+                    questions_data.append({
+                        'id': db_question.id,
+                        'question_text': db_question.question_text,
+                        'options': db_question.get_options(),
+                        'correct_option': db_question.correct_option,
+                        'explanation': db_question.explanation,
+                        'points': db_question.points,
+                        'is_ai': False
+                    })
+                    db_questions_count += 1
+                else:
+                    # Last resort: use simple fallback
+                    questions_data.append(create_unique_fallback_question(level_number, i, current_difficulty, topic))
+        
+        # Shuffle the final questions to mix AI and database questions randomly
+        #random.shuffle(questions_data)
         
         level_data = {
             'level_number': level.level_number,
             'category': level.category.name,
-            'difficulty': level.category.difficulty,
+            'difficulty': current_difficulty,
             'color': level.category.color,
             'icon': level.category.icon,
             'time_limit': level.time_limit,
             'questions_required': level.questions_required,
-            'questions': questions_data
+            'questions': questions_data,
+            'ai_questions_count': ai_questions_count,
+            'db_questions_count': db_questions_count
         }
+        
+        print(f"Level {level_number}: {db_questions_count} DB questions, {ai_questions_count} AI questions")
         
         return JsonResponse(level_data)
         
     except QuizLevel.DoesNotExist:
         return JsonResponse({'error': 'Level not found'}, status=404)
+
+# def create_unique_fallback_question(level_number, index, difficulty, topic):
+#     """Create unique fallback questions"""
+#     fallbacks = [
+#         {
+#             'question': f"Level {level_number}: What is {index + 1} + {level_number}?",
+#             'options': [str(index + 1), str(index + 2), str(index + 1 + level_number), str(index + level_number + 2)],
+#             'correct': "C",
+#             'explanation': f"{index + 1} + {level_number} = {index + 1 + level_number}"
+#         },
+#         {
+#             'question': f"Level {level_number}: Which number is largest?",
+#             'options': [str(level_number), str(index + 1), str(level_number + index + 5), str(level_number * 2)],
+#             'correct': "C",
+#             'explanation': f"{level_number + index + 5} is the largest number."
+#         }
+#     ]
+    
+#     return {
+#         'id': f"fallback_{level_number}_{index}",
+#         'question_text': fallbacks[index % len(fallbacks)]['question'],
+#         'options': [
+#             {'letter': 'A', 'text': fallbacks[index % len(fallbacks)]['options'][0]},
+#             {'letter': 'B', 'text': fallbacks[index % len(fallbacks)]['options'][1]},
+#             {'letter': 'C', 'text': fallbacks[index % len(fallbacks)]['options'][2]},
+#             {'letter': 'D', 'text': fallbacks[index % len(fallbacks)]['options'][3]}
+#         ],
+#         'correct_option': fallbacks[index % len(fallbacks)]['correct'],
+#         'explanation': fallbacks[index % len(fallbacks)]['explanation'],
+#         'points': 10,
+#         'is_ai': False
+#     }
 
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -144,6 +286,7 @@ def start_quiz_session(request):
         
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=400)
+
 
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -232,3 +375,19 @@ def get_quiz_categories(request):
         for cat in categories_query
     ]
     return JsonResponse({'categories': categories_data})
+
+
+@csrf_exempt
+def get_next_question(request):
+    user = request.user
+    
+    # Example simple difficulty rule:
+    difficulty = "easy"  # or "medium" / "hard"
+    
+    question_data = generate_ai_question(
+        difficulty=difficulty,
+        age=user.profile.age if hasattr(user, "profile") else 10,
+        topic="mathematics"  # can change dynamically
+    )
+
+    return JsonResponse(question_data, safe=False)

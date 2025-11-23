@@ -6,6 +6,7 @@ from . import color_splash_view
 from . import sentence_builder
 from . import math_game
 from . import quiz_game
+from . import ai_question_generator
 
 urlpatterns = [
     # Authentication URLs
@@ -88,4 +89,7 @@ urlpatterns = [
     path('api/save-color-game/', color_splash_view.save_color_game_state, name='save_color_game'),
     path('api/load-color-game/', color_splash_view.load_color_game_state, name='load_color_game'),
     path('api/complete-color-level/', color_splash_view.complete_color_level, name='complete_color_level'),
+
+    # ai question generator
+    path('api/get-next-question/', quiz_game.get_next_question, name='get_next_question'),
 ]
