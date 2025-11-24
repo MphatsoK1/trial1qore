@@ -487,41 +487,6 @@
         updateTip();
     }
 
-        // Load current question
-        // function loadQuestion() {
-        //     if (currentQuestionIndex >= questions.length) {
-        //         levelComplete();
-        //         return;
-        //     }
-            
-        //     const question = questions[currentQuestionIndex];
-        //     selectedOption = null;
-            
-        //     elements.questionText.textContent = question.question_text;
-        //     elements.optionsContainer.innerHTML = '';
-        //     elements.feedback.textContent = '';
-        //     elements.explanation.classList.add('hidden');
-        //     elements.nextBtn.classList.add('hidden');
-            
-        //     updateProgress();
-            
-        //     // Create option buttons
-        //     question.options.forEach(option => {
-        //         const button = document.createElement('button');
-        //         button.className = 'option-button w-full';
-        //         button.innerHTML = `
-        //             <span class="option-letter">${option.letter}</span>
-        //             ${option.text}
-        //         `;
-        //         button.addEventListener('click', () => selectOption(option.letter, button));
-        //         elements.optionsContainer.appendChild(button);
-        //     });
-            
-        //     // Update tip
-        //     updateTip();
-        // }
-
-        // Select option
         function selectOption(optionLetter, button) {
             if (!gameActive || elements.nextBtn.classList.contains('hidden') === false) return;
             

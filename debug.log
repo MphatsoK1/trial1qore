@@ -7017,3 +7017,1768 @@ Not Found: /favicon.ico
 "GET /games-page/ HTTP/1.1" 200 14043
 "POST /api/save-game/ HTTP/1.1" 200 52
 "POST /api/complete-level/ HTTP/1.1" 200 21
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15099
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=EaiwLn6k8Akbx9Jw&code=4%2F0Ab32j91tzoUTAuP-2lhsULdyJlOk__dP6PR6TCuUMIfAPRYEZR-9sz88AEvEFKAExOv6Tw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 30868
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /riddles/ HTTP/1.1" 200 30868
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /riddles/ HTTP/1.1" 200 30868
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /home/ HTTP/1.1" 200 14915
+"GET /home/ HTTP/1.1" 200 14915
+"GET /riddles/ HTTP/1.1" 200 30868
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33081
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 448
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2668
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33081
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2780
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33081
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 463
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2706
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33081
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /games-page/ HTTP/1.1" 200 14043
+- Broken pipe from ('127.0.0.1', 51571)
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 30868
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /riddles/ HTTP/1.1" 200 30868
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /home/ HTTP/1.1" 200 14015
+"GET /quizes/ HTTP/1.1" 200 33081
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 116
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2718
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /home/ HTTP/1.1" 200 14015
+"GET /home/ HTTP/1.1" 200 14015
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15317
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=Wbhxg0kraEt7VZXB&code=4%2F0Ab32j90qQkTBMb-y-yfDatqZd_XeaOvBNT-wwFGyipwSapNCPUJD9-i-NdVGGwhsLyMbWQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=none HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /home/ HTTP/1.1" 200 14015
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15317
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=IJALKsYLcNOerv5x&code=4%2F0Ab32j91hHWCUV03ecpH6SsBgz9b5Fc-HibuPAIigyEVFuSDCK75QZCA57kQ3vmAAIlyeqA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=1&prompt=none HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /riddles/ HTTP/1.1" 200 30868
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /riddles/ HTTP/1.1" 200 30868
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14915
+"GET /quizes/ HTTP/1.1" 200 33081
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 941
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2836
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33081
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 317
+"GET /home/ HTTP/1.1" 200 14915
+- Broken pipe from ('127.0.0.1', 52636)
+"GET /home/ HTTP/1.1" 200 14015
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /quizes/ HTTP/1.1" 200 33081
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 245
+"GET /games-page/ HTTP/1.1" 200 14043
+- Broken pipe from ('127.0.0.1', 56732)
+"GET /quizes/ HTTP/1.1" 200 33081
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 366
+"GET /games-page/ HTTP/1.1" 200 14043
+- Broken pipe from ('127.0.0.1', 53537)
+"GET /quizes/ HTTP/1.1" 200 33081
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 299
+"GET /games-page/ HTTP/1.1" 200 14043
+- Broken pipe from ('127.0.0.1', 53460)
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14915
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14915
+"GET /riddles/ HTTP/1.1" 200 30868
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14915
+Watching for file changes with StatReloader
+"GET /riddles/ HTTP/1.1" 200 30868
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /riddles/ HTTP/1.1" 200 30983
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /riddles/ HTTP/1.1" 200 30983
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 30983
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Internal Server Error: /api/riddles/level/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: core_riddlelevel
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 789, in get_riddle_level
+    level = levels_query.first()
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1059, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: core_riddlelevel
+"GET /api/riddles/level/?level=1 HTTP/1.1" 500 141158
+Watching for file changes with StatReloader
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 5174
+Not Found: /api/get_riddle/
+"GET /api/get_riddle/?level=1 HTTP/1.1" 404 13703
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 200 178546
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 200 1347565
+"GET /static/winner-background-rendering.png HTTP/1.1" 200 956785
+"GET /static/wel.png HTTP/1.1" 200 4069763
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 200 82729
+"GET /static/service-worker.js HTTP/1.1" 200 1974
+"GET / HTTP/1.1" 200 7326
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15099
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=nK0FMymjgWO3O1UG&code=4%2F0Ab32j93jwpuvAdq1wB_J6wKa-cM0gInod0oLkFqA1tkUzoxQA782KQ4zoEWPdYPFV61m6Q&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 33821
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+Bad Request: /api/riddles/start/
+"POST /api/riddles/start/ HTTP/1.1" 400 71
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 33821
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+Not Found: /api/riddles/level/
+"GET /api/riddles/level/?level=1 HTTP/1.1" 404 28
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /riddles/ HTTP/1.1" 200 33821
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3319
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /quizes/ HTTP/1.1" 200 33081
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 308
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2707
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 33821
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2366
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /profile/ HTTP/1.1" 200 23763
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15317
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14912
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 33818
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2629
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /games-page/ HTTP/1.1" 200 14043
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /riddles/ HTTP/1.1" 200 36927
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2201
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+Not Found: /api/riddles/next-level/
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14043
+"GET /home/ HTTP/1.1" 200 14912
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 36927
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2493
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+Not Found: /api/riddles/next-level/
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 404 27
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2997
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /riddles/ HTTP/1.1" 200 37225
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2660
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\math_game.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\math_game.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\math_game.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\math_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /riddles/ HTTP/1.1" 200 38592
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3282
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 3600
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/riddles/level/?level=3 HTTP/1.1" 200 4067
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/riddles/level/?level=4 HTTP/1.1" 200 3798
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+Not Found: /api/riddles/next-level/
+"GET /api/riddles/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /quizes/ HTTP/1.1" 200 33078
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 378
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2407
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /riddles/ HTTP/1.1" 200 38592
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2853
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /quizes/ HTTP/1.1" 200 33078
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 510
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2376
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /math-game/ HTTP/1.1" 200 30292
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 2873
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 3030
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /math-game/ HTTP/1.1" 200 30292
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 3283
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"GET /games-page/ HTTP/1.1" 200 14894
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /home/ HTTP/1.1" 302 0
+"GET /login/?next=/home/ HTTP/1.1" 200 15100
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/?next=/home/ HTTP/1.1" 200 15072
+"POST /login/?next=/home/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14912
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 38592
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3161
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 2884
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/riddles/level/?level=3 HTTP/1.1" 200 4266
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/riddles/level/?level=4 HTTP/1.1" 200 3563
+"GET /home/ HTTP/1.1" 200 14912
+"GET /math-game/ HTTP/1.1" 200 30292
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 2967
+"GET /home/ HTTP/1.1" 200 14912
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 2907
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/math-game/update-progress/ HTTP/1.1" 200 21
+"GET /api/math-game/next-level/?current_level=1 HTTP/1.1" 200 61
+"GET /api/math-game/level/?level=2 HTTP/1.1" 200 3143
+"GET /home/ HTTP/1.1" 200 14912
+"GET /riddles/ HTTP/1.1" 200 38536
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2824
+"GET /riddles/ HTTP/1.1" 200 38592
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2652
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_math_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET / HTTP/1.1" 200 7326
+"GET / HTTP/1.1" 200 7326
+"GET /login/ HTTP/1.1" 200 14808
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=pcFD6H1zIDG6hEZc&code=4%2F0Ab32j91zonvkwyyG5M5UNIw3SDRFuNg7NQpgH73C9gtzzTRhR2wBzoaMian1YncEOfffHg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /static/Untitled-1.png HTTP/1.1" 200 153565
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 200 860576
+"GET /riddles/ HTTP/1.1" 200 38595
+"GET /static/sounds/yay.mp3 HTTP/1.1" 200 25920
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3636
+- Broken pipe from ('127.0.0.1', 59592)
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 3582
+"GET /riddles/ HTTP/1.1" 200 38592
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2986
+"GET /riddles/ HTTP/1.1" 200 38592
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2808
+"GET /riddles/ HTTP/1.1" 200 38225
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2911
+"GET /riddles/ HTTP/1.1" 200 38592
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3465
+"GET /riddles/ HTTP/1.1" 200 38617
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3441
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3301
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3271
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /quizes/ HTTP/1.1" 200 31689
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 325
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2260
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /quizes/ HTTP/1.1" 200 31689
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 301
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2170
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 3005
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 2861
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 2788
+"GET /math-game/ HTTP/1.1" 200 30292
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /math-game/ HTTP/1.1" 200 30292
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+- Broken pipe from ('127.0.0.1', 57755)
+- Broken pipe from ('127.0.0.1', 62290)
+- Broken pipe from ('127.0.0.1', 49592)
+- Broken pipe from ('127.0.0.1', 54907)
+- Broken pipe from ('127.0.0.1', 57622)
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 2645
+- Broken pipe from ('127.0.0.1', 53648)
+- Broken pipe from ('127.0.0.1', 64878)
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_math_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_math_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /math-game/ HTTP/1.1" 200 30295
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /math-game/ HTTP/1.1" 200 30295
+- Broken pipe from ('127.0.0.1', 51914)
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+- Broken pipe from ('127.0.0.1', 51938)
+"GET /math-game/ HTTP/1.1" 200 30295
+- Broken pipe from ('127.0.0.1', 51942)
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+- Broken pipe from ('127.0.0.1', 51940)
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 4314
+- Broken pipe from ('127.0.0.1', 51944)
+"GET /math-game/ HTTP/1.1" 200 30295
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 4564
+- Broken pipe from ('127.0.0.1', 51945)
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_math_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"POST /api/math-game/update-progress/ HTTP/1.1" 200 21
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_riddles_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /riddles/ HTTP/1.1" 200 38620
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3689
+"GET /api/math-game/next-level/?current_level=1 HTTP/1.1" 200 61
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /quizes/ HTTP/1.1" 200 31689
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 728
+"GET /games-page/ HTTP/1.1" 200 14894
+- Broken pipe from ('127.0.0.1', 63999)
+- Broken pipe from ('127.0.0.1', 62825)
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+- Broken pipe from ('127.0.0.1', 57660)
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2591
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 200 5005207
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /riddles/ HTTP/1.1" 200 38617
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2940
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /quizes/ HTTP/1.1" 200 31689
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 259
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2242
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /home/ HTTP/1.1" 200 14912
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2255
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /home/ HTTP/1.1" 200 14912
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15302
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 302 0
+"GET /login/?next=/home/ HTTP/1.1" 200 14824
+"POST /login/?next=/home/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14912
+"GET /math-game/ HTTP/1.1" 200 30292
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/math-game/start-session/ HTTP/1.1" 200 107
+"GET /api/math-game/level/?level=1 HTTP/1.1" 200 2578
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2241
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 2309
+"GET /riddles/ HTTP/1.1" 200 38617
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3689
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3031
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2388
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /profile/ HTTP/1.1" 200 23742
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15302
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=2y7LmrqVCcr08qk4&code=4%2F0Ab32j92Bl_DPDMSFCKayQ6RXszwZefSvJXri79kXhi-F6_hrb8XRv0MQJWPmbtooTUGxww&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=3&prompt=none HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14918
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 38623
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3099
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_riddles_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /riddles/ HTTP/1.1" 200 38623
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2900
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /profile/ HTTP/1.1" 200 23757
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 14918
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 38623
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3103
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 6523
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/riddles/level/?level=3 HTTP/1.1" 200 7908
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 3851
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+"GET /static/admin/css/base.css HTTP/1.1" 200 21310
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 21724
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 22261
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/core.js HTTP/1.1" 200 5682
+"GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /admin/account/emailaddress/4/change/ HTTP/1.1" 200 20913
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+"GET /admin/auth/group/ HTTP/1.1" 200 18271
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 22261
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/core/gameemoji/ HTTP/1.1" 200 18562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /admin/core/gameemoji/ HTTP/1.1" 200 18562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/core/mathgamesession/ HTTP/1.1" 200 38910
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET /admin/socialaccount/socialapp/ HTTP/1.1" 200 19400
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/socialaccount/socialaccount/ HTTP/1.1" 200 21191
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/socialaccount/socialtoken/ HTTP/1.1" 200 19641
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/auth/user/ HTTP/1.1" 200 27545
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/core/gamelevel/ HTTP/1.1" 200 17965
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/core/quizlevel/ HTTP/1.1" 200 22730
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/core/quizquestion/ HTTP/1.1" 200 62145
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/core/capturegamesession/ HTTP/1.1" 200 19545
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/core/ HTTP/1.1" 200 16692
+"GET /admin/core/userprofile/ HTTP/1.1" 200 25234
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/core/ HTTP/1.1" 200 16692
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\admin.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 200 24021
+"GET /admin/core/riddlecategory/ HTTP/1.1" 200 21738
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/ HTTP/1.1" 200 24021
+"GET /admin/core/riddlequestion/ HTTP/1.1" 200 19613
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/ HTTP/1.1" 200 24021
+"GET /admin/core/userriddleprogress/ HTTP/1.1" 200 21521
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/ HTTP/1.1" 200 24021
+"GET /admin/core/riddlequestion/ HTTP/1.1" 200 19613
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /admin/ HTTP/1.1" 200 24021
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3283
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 6855
+"GET /games-page/ HTTP/1.1" 200 14894
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_riddles_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_riddles_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_riddles_generator.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_riddles_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_riddles_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\ai_riddles_generator.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /quizes/ HTTP/1.1" 200 31689
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/quizes/start-session/ HTTP/1.1" 200 107
+"GET /api/get-next-question/ HTTP/1.1" 200 378
+"GET /api/quizes/level/?level=1 HTTP/1.1" 200 2410
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 3698
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 4971
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/riddles/level/?level=3 HTTP/1.1" 200 7262
+"GET /games-page/ HTTP/1.1" 200 14894
+"GET /profile/ HTTP/1.1" 200 23687
+"GET /static/avatars/58509039_9439767.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509042_9439833.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509054_9441186.jpg HTTP/1.1" 304 0
+"GET /static/avatars/58509040_9434650.jpg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15102
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14912
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /riddles/ HTTP/1.1" 200 38617
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2329
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /riddles/ HTTP/1.1" 200 38617
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2608
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 3832
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\riddles_game.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET / HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 14915
+"GET /riddles/ HTTP/1.1" 200 38617
+"GET /static/sounds/sounds.mp3 HTTP/1.1" 304 0
+"POST /api/riddles/start/ HTTP/1.1" 200 112
+"GET /api/riddles/level/?level=1 HTTP/1.1" 200 2628
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=1 HTTP/1.1" 200 96
+"GET /api/riddles/level/?level=2 HTTP/1.1" 200 2710
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=2 HTTP/1.1" 200 97
+"GET /api/riddles/level/?level=3 HTTP/1.1" 200 5360
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+"GET /api/riddles/next-level/?current_level=3 HTTP/1.1" 200 101
+"GET /api/riddles/level/?level=4 HTTP/1.1" 200 3324
+"POST /api/riddles/update/ HTTP/1.1" 200 21
+Not Found: /api/riddles/next-level/
+"GET /api/riddles/next-level/?current_level=4 HTTP/1.1" 404 27
+"GET /games-page/ HTTP/1.1" 200 14894

@@ -701,3 +701,114 @@ class UserQuizProgress(models.Model):
         if self.total_questions == 0:
             return 0
         return round((self.correct_answers / self.total_questions) * 100, 1)
+
+
+# ============================================
+# Riddle GAME MODELS
+# ============================================
+
+class RiddleCategory(models.Model):
+    """Categories for quiz questions"""
+    DIFFICULTY_CHOICES = [
+        ('easy', 'Easy'),
+        ('medium', 'Medium'), 
+        ('hard', 'Hard'),
+        ('expert', 'Expert')
+    ]
+    
+    name = models.CharField(max_length=100)
+    difficulty = models.CharField(max_length=10, choices=DIFFICULTY_CHOICES)
+    description = models.TextField(blank=True)
+    color = models.CharField(max_length=7, default='#3B82F6')  # Hex color for UI
+    icon = models.CharField(max_length=50, default='🧠')  # Emoji icon
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name = "Riddle Category"
+        verbose_name_plural = "Riddle Categories"
+        ordering = ['difficulty', 'name']
+    
+    def __str__(self):
+        return f"{self.name} ({self.get_difficulty_display()})"
+
+class RiddleQuestion(models.Model):
+    """Riddle questions and answers"""
+    category = models.ForeignKey(RiddleCategory, on_delete=models.CASCADE, related_name='questions')
+    question_text = models.TextField()
+    answer = models.TextField()
+    explanation = models.TextField(blank=True, help_text="Explanation for the correct answer")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        ordering = ['category__difficulty']
+    
+    def __str__(self):
+        return f"{self.question_text[:50]}..."
+    
+
+class RiddleLevel(models.Model):
+    """Level configurations for Quiz Game"""
+    level_number = models.IntegerField(unique=True)
+    category = models.ForeignKey(RiddleCategory, on_delete=models.CASCADE)
+    questions_required = models.IntegerField(default=5)
+    time_limit = models.IntegerField(default=300)  # seconds
+    unlock_score = models.IntegerField(default=0)
+    
+    class Meta:
+        ordering = ['level_number']
+    
+    def __str__(self):
+        return f"Level {self.level_number} - {self.category.name}"
+
+class RiddleGameSession(models.Model):
+    """Game sessions for Quiz Game"""
+    session_id = models.CharField(max_length=100, unique=True)
+    player_name = models.CharField(max_length=100, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    current_level = models.IntegerField(default=1)
+    total_score = models.IntegerField(default=0)
+    questions_answered = models.IntegerField(default=0)
+    correct_answers = models.IntegerField(default=0)
+    perfect_streak = models.IntegerField(default=0)
+    time_spent = models.IntegerField(default=0)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = "Riddle Game Session"
+        verbose_name_plural = "Riddle Game Sessions"
+        ordering = ['-created_at']
+    
+    def __str__(self):
+        return f"Session {self.session_id} - Level {self.current_level}"
+    
+    def accuracy_rate(self):
+        if self.questions_answered == 0:
+            return 0
+        return round((self.correct_answers / self.questions_answered) * 100, 1)
+
+class UserRiddleProgress(models.Model):
+    """User progress tracking for Riddle Game"""
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='riddle_progress')
+    highest_level = models.IntegerField(default=1)
+    total_score = models.IntegerField(default=0)
+    total_questions = models.IntegerField(default=0)
+    correct_answers = models.IntegerField(default=0)
+    perfect_riddles = models.IntegerField(default=0)
+    games_played = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name_plural = "User Riddle Progress"
+    
+    def __str__(self):
+        return f"{self.user.username} - Level {self.highest_level}"
+    
+    def accuracy_rate(self):
+        if self.total_questions == 0:
+            return 0
+        return round((self.correct_answers / self.total_questions) * 100, 1)

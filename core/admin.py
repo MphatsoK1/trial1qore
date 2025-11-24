@@ -1,147 +1,3 @@
-# from django.contrib import admin
-# from .models import *
-
-# # Register your models here.
-# from django.contrib import admin
-# from .models import *
-
-# @admin.register(WordCategory)
-# class WordCategoryAdmin(admin.ModelAdmin):
-#     list_display = ['name', 'icon', 'is_active', 'created_at']
-#     list_filter = ['is_active']
-#     search_fields = ['name']
-
-# @admin.register(WordItem)
-# class WordItemAdmin(admin.ModelAdmin):
-#     list_display = ['word', 'category', 'difficulty_level', 'part_of_speech', 'is_active']
-#     list_filter = ['category', 'difficulty_level', 'is_active']
-#     search_fields = ['word', 'definition']
-
-# @admin.register(WordSearchGame)
-# class WordSearchGameAdmin(admin.ModelAdmin):
-#     list_display = ['id', 'category', 'difficulty', 'learning_mode', 'completed', 'created_at']
-#     list_filter = ['difficulty', 'learning_mode', 'completed']
-#     search_fields = ['category__name']
-
-# # @admin.register(GameSession)
-# # class GameSessionAdmin(admin.ModelAdmin):
-# #     list_display = ['session_id', 'game', 'score', 'completed', 'start_time']
-# #     list_filter = ['completed']
-# #     search_fields = ['session_id']
-
-# @admin.register(UserWordProgress)
-# class UserWordProgressAdmin(admin.ModelAdmin):
-#     list_display = ['user_identifier', 'word', 'times_correct', 'times_attempted', 'accuracy']
-#     list_filter = ['word__category']
-#     search_fields = ['user_identifier', 'word__word']
-
-# # auth/admin.py
-# from django.contrib import admin
-# from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-# from django.contrib.auth.models import User
-# from .models import UserProfile
-
-# class UserProfileInline(admin.StackedInline):
-#     model = UserProfile
-#     can_delete = False
-#     verbose_name_plural = 'Profile'
-#     fk_name = 'user'
-#     fields = ('preset_avatar', 'avatar', 'profile_completed', 'created_at', 'updated_at')
-#     readonly_fields = ('created_at', 'updated_at')
-
-# class UserAdmin(BaseUserAdmin):
-#     inlines = (UserProfileInline,)
-#     list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'get_profile_status')
-#     list_select_related = ('profile',)
-
-#     def get_profile_status(self, instance):
-#         return '✓ Complete' if instance.profile.profile_completed else '✗ Incomplete'
-#     get_profile_status.short_description = 'Profile Status'
-
-#     def get_inline_instances(self, request, obj=None):
-#         if not obj:
-#             return list()
-#         return super(UserAdmin, self).get_inline_instances(request, obj)
-
-# @admin.register(UserProfile)
-# class UserProfileAdmin(admin.ModelAdmin):
-#     list_display = ['user', 'profile_completed', 'preset_avatar', 'has_custom_avatar', 'created_at']
-#     list_filter = ['profile_completed', 'created_at', 'preset_avatar']
-#     search_fields = ['user__username', 'user__email']
-#     readonly_fields = ['created_at', 'updated_at', 'get_avatar_preview']
-    
-#     fieldsets = (
-#         ('User Information', {
-#             'fields': ('user',)
-#         }),
-#         ('Avatar Settings', {
-#             'fields': ('preset_avatar', 'avatar', 'get_avatar_preview')
-#         }),
-#         ('Status', {
-#             'fields': ('profile_completed', 'created_at', 'updated_at')
-#         }),
-#     )
-
-#     def has_custom_avatar(self, obj):
-#         return bool(obj.avatar)
-#     has_custom_avatar.boolean = True
-#     has_custom_avatar.short_description = 'Custom Avatar'
-
-#     def get_avatar_preview(self, obj):
-#         from django.utils.html import format_html
-#         if obj.avatar or obj.preset_avatar:
-#             return format_html(
-#                 '<img src="{}" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #667eea;" />',
-#                 obj.get_avatar_url()
-#             )
-#         return 'No avatar set'
-#     get_avatar_preview.short_description = 'Avatar Preview'
-
-
-# from django.contrib import admin
-# from .models import *
-
-# @admin.register(Category)
-# class CategoryAdmin(admin.ModelAdmin):
-#     list_display = ['name', 'category_type', 'icon', 'is_active', 'created_at']
-#     list_filter = ['category_type', 'is_active']
-#     search_fields = ['name']
-
-# @admin.register(LearningItem)
-# class LearningItemAdmin(admin.ModelAdmin):
-#     list_display = ['name', 'category', 'order', 'is_active']
-#     list_filter = ['category', 'is_active']
-#     search_fields = ['name']
-
-# @admin.register(PhonicsItem)
-# class PhonicsItemAdmin(admin.ModelAdmin):
-#     list_display = ['letter', 'order', 'is_active']
-#     list_filter = ['is_active']
-#     search_fields = ['letter']
-
-# # @admin.register(GameSession)
-# # class GameSessionAdmin(admin.ModelAdmin):
-# #     list_display = ['session_id', 'category', 'score', 'completed', 'time_taken', 'created_at']
-# #     list_filter = ['category', 'completed']
-# #     search_fields = ['session_id']
-
-# @admin.register(UserProgress)
-# class UserProgressAdmin(admin.ModelAdmin):
-#     list_display = ['user_identifier', 'category', 'total_score', 'games_played', 'levels_completed', 'updated_at']
-#     list_filter = ['category']
-#     search_fields = ['user_identifier']
-
-# @admin.register(TaskSet)
-# class TaskSetAdmin(admin.ModelAdmin):
-#     list_display = ['name', 'category', 'items_per_set', 'order', 'is_active']
-#     list_filter = ['category', 'is_active']
-#     search_fields = ['name']
-
-# # Re-register UserAdmin
-# admin.site.unregister(User)
-# admin.site.register(User, UserAdmin)
-
-
 from django.contrib import admin
 from .models import *
 
@@ -324,3 +180,18 @@ class QuizGameSessionAdmin(admin.ModelAdmin):
 class UserQuizProgressAdmin(admin.ModelAdmin):
     list_display = ['user', 'highest_level', 'total_score', 'accuracy_rate', 'games_played']
     readonly_fields = ['created_at', 'updated_at']
+
+from django.contrib import admin
+from .models import (
+    RiddleCategory,
+    RiddleQuestion,
+    RiddleLevel,
+    RiddleGameSession,
+    UserRiddleProgress
+)
+
+admin.site.register(RiddleCategory)
+admin.site.register(RiddleQuestion)
+admin.site.register(RiddleLevel)
+admin.site.register(RiddleGameSession)
+admin.site.register(UserRiddleProgress)

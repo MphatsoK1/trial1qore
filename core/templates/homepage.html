@@ -100,8 +100,8 @@
     <div class="bg-gradient-to-r from-purple-600 to-red-500 text-white p-3 rounded-lg mb-3 flex items-center justify-between">
       <div class="flex flex-col">
         <h2 class="font-maria heading-primary">Today's Recommendation</h2>
-        <p class="text-xs font-poppins">Try the Word Search Game!</p>
-        <a href="{% url 'games_page' %}" class="bg-white text-purple-600 px-3 py-1 rounded mt-1.5 text-sm font-poppins btn-play self-start">
+        <p class="text-xs font-poppins">Try the Riddles Game!</p>
+        <a href="{% url 'riddles' %}" class="bg-white text-purple-600 px-3 py-1 rounded mt-1.5 text-sm font-poppins btn-play self-start">
           Start Playing
         </a>
       </div>
@@ -149,10 +149,25 @@
     <h2 class="font-poppins heading-primary mb-3">Games & Activities</h2>
     
     <div class="space-y-3">
+      <!-- Riddles Game - NEW ADDITION -->
+      <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-lg flex items-center">
+        <div class="bg-purple-500 w-14 h-14 sm:w-16 sm:h-16 rounded-full icon-shadow mr-3 flex items-center justify-center flex-shrink-0">
+          <i class='bx bx-question-mark text-white text-3xl sm:text-4xl'></i>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-maria text-lg font-bold">Riddles Game</h3>
+          <p class="text-xs font-poppins">Solve fun brain teasers and puzzles! Test your thinking skills with challenging riddles that will make you think outside the box.</p>
+          <a href="{% url 'riddles' %}" class="bg-white text-purple-500 rounded mt-1.5 inline-flex items-center px-3 py-1 btn-play">
+            <i class='bx bx-play-circle mr-2'></i>
+            <span>Start Playing</span>
+          </a>
+        </div>
+      </div>
+
       <!-- Quiz Game -->
       <div class="bg-blue-500 text-white p-3 rounded-lg flex items-center">
         <div class="bg-blue-500 w-14 h-14 sm:w-16 sm:h-16 rounded-full icon-shadow mr-3 flex items-center justify-center flex-shrink-0">
-          <i class='bx bx-question-mark text-white text-3xl sm:text-4xl'></i>
+          <i class='bx bx-brain text-white text-3xl sm:text-4xl'></i>
         </div>
         <div class="flex-1">
           <h3 class="font-maria text-lg font-bold">Quiz Game</h3>

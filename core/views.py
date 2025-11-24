@@ -16,9 +16,9 @@ import uuid
 from .forms import *
 from .models import *
 from .game_utils import filter_by_age_appropriate, get_age_from_birthdate, get_difficulty_by_age
+from . import riddles_game as riddles_views
 from datetime import date
 from dateutil.relativedelta import relativedelta
-
 logger = logging.getLogger(__name__)
 
 def splash_screen(request):
@@ -552,27 +552,6 @@ def login_view(request):
     return render(request, 'auth/login.html', {'form': form})
 
 
-# def register_view(request):
-#     if request.user.is_authenticated:
-#         return redirect('home')
-    
-#     if request.method == 'POST':
-#         form = RegisterForm(request.POST)
-#         if form.is_valid():
-#             user = form.save()
-
-#             # FIX: Specify the backend
-#             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-
-#             messages.success(request, f'Registration successful! Welcome, {user.username}!')
-#             return redirect('profile_setup')
-
-#         messages.error(request, 'Please correct the errors below.')
-#     else:
-#         form = RegisterForm()
-
-#     return render(request, 'auth/register.html', {'form': form})
-
 def register_view(request):
     if request.user.is_authenticated:
         return redirect('home')
@@ -710,6 +689,13 @@ def profile_view(request):
         total_points += quiz_progress.total_score
         highest_level = max(highest_level, quiz_progress.highest_level)
     
+    # Riddles Game
+    riddle_progress = UserRiddleProgress.objects.filter(user=user).first()
+    if riddle_progress:
+        games_played += riddle_progress.games_played
+        total_points += riddle_progress.total_score
+        highest_level = max(highest_level, riddle_progress.highest_level)
+    
     # Capture Words Game (from GameScore model)
     capture_scores = GameScore.objects.filter(user=user, game_name__icontains='capture')
     games_played += capture_scores.count()
@@ -770,4 +756,40 @@ def profile_view(request):
     response['Expires'] = '0'
     
     return response
-    
+
+
+# ============================================
+# RIDDLES GAME VIEWS (delegated to core.riddles_game)
+# ============================================
+
+def riddles_game(request):
+    return riddles_views.riddles_game(request)
+
+
+def get_riddle_level(request):
+    return riddles_views.get_riddle_level(request)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def start_riddle_session(request):
+    return riddles_views.start_riddle_session(request)
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def update_riddle_progress(request):
+    return riddles_views.update_riddle_progress(request)
+
+
+def get_next_riddle_level(request):
+    return riddles_views.get_next_riddle_level(request)
+
+
+def get_riddle_categories(request):
+    return riddles_views.get_riddle_categories(request)
+
+
+@csrf_exempt
+def get_next_riddle(request):
+    return riddles_views.get_next_riddle(request)

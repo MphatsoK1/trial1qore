@@ -6,6 +6,7 @@ from . import color_splash_view
 from . import sentence_builder
 from . import math_game
 from . import quiz_game
+from . import riddles_game
 from . import ai_question_generator
 
 urlpatterns = [
@@ -53,6 +54,15 @@ urlpatterns = [
     path('api/quizes/update-progress/', quiz_game.update_quiz_progress, name='update_quiz_progress'),
     path('api/quizes/next-level/', quiz_game.get_next_quiz_level, name='get_next_quiz_level'),
     path('api/quizes/categories/', quiz_game.get_quiz_categories, name='get_quiz_categories'),
+
+    # Riddles Game URLs
+    path('riddles/', riddles_game.riddles_game, name='riddles'),
+    path('api/riddles/level/', riddles_game.get_riddle_level, name='get_riddle_level'),
+    path('api/riddles/start/', riddles_game.start_riddle_session, name='start_riddle_session'),
+    path('api/riddles/update/', riddles_game.update_riddle_progress, name='update_riddle_progress'),
+    path('api/riddles/next-level/', riddles_game.get_next_riddle_level, name='get_next_riddle_level'),
+    path('api/riddles/categories/', riddles_game.get_riddle_categories, name='get_riddle_categories'),
+    path('api/riddles/next/', riddles_game.get_next_riddle, name='get_next_riddle'),
     
     # Math Game
     path('math-game/', math_game.math_game, name='math_game'),

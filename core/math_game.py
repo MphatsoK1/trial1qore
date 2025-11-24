@@ -1,19 +1,43 @@
 import json
 import random
+import logging
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
+from django.shortcuts import render
 from .models import MathGameLevel, MathGameProblem, MathGameSession, UserMathProgress
 from .game_utils import filter_by_age_appropriate, get_age_from_birthdate, get_difficulty_by_age
-from django.shortcuts import render
+from .ai_math_generator import generate_ai_math_problem
+
+logger = logging.getLogger(__name__)
 
 def math_game(request):
     return render(request, 'math_game/math_game.html')
 
-def generate_math_problem(level, user=None):
+def build_math_tip(operation):
+    tips = {
+        '+': "Addition combines numbers to make a larger number.",
+        '-': "Subtraction finds the difference between two numbers.",
+        '×': "Multiplication is repeated addition.",
+        '÷': "Division splits a number into equal groups."
+    }
+    return tips.get(operation, "Break the problem into smaller steps.")
+
+def build_math_hint(operation, num1, num2):
+    if operation == '+':
+        return f"Start by adding {num1} and {num2} tens and then the ones."
+    if operation == '-':
+        return f"Think of how much you subtract from {num1} to reach {num2}."
+    if operation == '×':
+        return f"Try adding {num1} together {num2} times."
+    if operation == '÷':
+        return f"See how many groups of {num2} fit into {num1}."
+    return "Look at the numbers carefully and solve step by step."
+
+def generate_math_problem(level, user=None, level_config=None):
     """Generate a math problem based on level configuration, adjusted for user age"""
-    level_config = MathGameLevel.objects.get(level_number=level)
-    operations = level_config.operations
+    level_config = level_config or MathGameLevel.objects.get(level_number=level)
+    operations = level_config.operations or ['+']
     min_num = level_config.number_range_min
     max_num = level_config.number_range_max
     
@@ -65,8 +89,38 @@ def generate_math_problem(level, user=None):
         'problem_text': problem_text,
         'display_text': display_text,
         'correct_answer': answer,
-        'operation': operation
+        'operation': operation,
+        'tip': build_math_tip(operation),
+        'hint': build_math_hint(operation, num1, num2),
+        'explanation': f"{problem_text} = {answer}",
+        'is_ai': False
     }
+
+def serialize_db_problem(db_problem):
+    problem_text = db_problem.problem_text
+    display_text = f"{problem_text} = ?" if '=' not in problem_text else problem_text
+    num1, num2 = extract_numbers(problem_text)
+    return {
+        'problem_text': problem_text,
+        'display_text': display_text,
+        'correct_answer': db_problem.correct_answer,
+        'operation': db_problem.operation,
+        'tip': build_math_tip(db_problem.operation),
+        'hint': db_problem.hint or build_math_hint(db_problem.operation, num1, num2),
+        'explanation': f"{problem_text} = {db_problem.correct_answer}",
+        'is_ai': False
+    }
+
+def extract_numbers(problem_text):
+    try:
+        cleaned = problem_text.replace('×', '*').replace('÷', '/')
+        parts = cleaned.replace('=', '').split()
+        numbers = [int(part) for part in parts if part.strip().isdigit()]
+        if len(numbers) >= 2:
+            return numbers[0], numbers[1]
+    except Exception:
+        pass
+    return 0, 0
 
 def get_math_level(request):
     """Get math problems for a specific level, filtered by user age"""
@@ -83,10 +137,42 @@ def get_math_level(request):
             # Fallback to default level if age filtering removes it
             level = MathGameLevel.objects.get(level_number=level_number)
         
-        # Generate problems on the fly (age-adjusted)
+        user_age = None
+        if user and hasattr(user, 'profile') and user.profile.date_of_birth:
+            user_age = get_age_from_birthdate(user.profile.date_of_birth)
+        
+        db_problems = list(MathGameProblem.objects.filter(level=level, is_active=True))
+        random.shuffle(db_problems)
+        
         problems = []
-        for _ in range(level.problems_required):
-            problem = generate_math_problem(level_number, user)
+        ai_problems_count = 0
+        db_problems_count = 0
+        
+        for idx in range(level.problems_required):
+            problem = None
+            try:
+                problem = generate_ai_math_problem(
+                    difficulty=level.difficulty,
+                    operations=level.operations,
+                    min_value=level.number_range_min,
+                    max_value=level.number_range_max,
+                    age=user_age or 10,
+                    problem_number=idx + 1
+                )
+                problem['display_text'] = problem.get('display_text') or f"{problem.get('problem_text')} = ?"
+                problem['tip'] = problem.get('tip') or build_math_tip(problem.get('operation', '+'))
+                problem['hint'] = problem.get('hint') or build_math_hint(problem.get('operation', '+'), 0, 0)
+                problem['explanation'] = problem.get('explanation') or f"{problem['problem_text']} = {problem['correct_answer']}"
+                problem['is_ai'] = True
+                ai_problems_count += 1
+            except Exception as exc:
+                logger.debug("AI math problem failed: %s", exc)
+                if db_problems:
+                    db_problem = db_problems.pop(0)
+                    problem = serialize_db_problem(db_problem)
+                    db_problems_count += 1
+                else:
+                    problem = generate_math_problem(level_number, user, level_config=level)
             problems.append(problem)
         
         level_data = {
@@ -96,7 +182,9 @@ def get_math_level(request):
             'problems_required': level.problems_required,
             'points_per_problem': level.points_per_problem,
             'operations': level.operations,
-            'problems': problems
+            'problems': problems,
+            'ai_problems_count': ai_problems_count,
+            'db_problems_count': db_problems_count
         }
         
         return JsonResponse(level_data)
