@@ -9291,3 +9291,70 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /static/avatars/2.jpg HTTP/1.1" 404 1899
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+Watching for file changes with StatReloader
+"GET /profile/ HTTP/1.1" 302 0
+"GET /login/?next=/profile/ HTTP/1.1" 200 15120
+"GET /static/logo.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"POST /login/?next=/profile/ HTTP/1.1" 200 15073
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /accounts/google/login/?next=%2Fprofile%2F?next=/home/ HTTP/1.1" 200 3107
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"POST /accounts/google/login/?next=%2Fprofile%2F?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=gdrM38GLgpw5ZlD9&code=4%2F0Ab32j93aGNUF9OzyHMY6BsIrxwPPV5zpvqkwTkAP-qeOd3xMJr0tyAsW1eznIm4z15hruA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none HTTP/1.1" 302 0
+"GET /profile/?next=/home/ HTTP/1.1" 200 23553
+"GET /static/avatars/4.svg HTTP/1.1" 304 0
+"GET /static/avatars/1.svg HTTP/1.1" 304 0
+"GET /static/avatars/2.svg HTTP/1.1" 304 0
+"GET /static/avatars/3.svg HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /home/ HTTP/1.1" 200 14899
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /home/ HTTP/1.1" 200 14899
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /profile/ HTTP/1.1" 200 23553
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"POST /profile/ HTTP/1.1" 200 61
+"GET /profile/ HTTP/1.1" 200 23553
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 14899
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /home/ HTTP/1.1" 200 14899
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /home/ HTTP/1.1" 200 14899
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /home/ HTTP/1.1" 200 15080
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /home/ HTTP/1.1" 200 15080
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /profile/ HTTP/1.1" 200 23553
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"POST /profile/ HTTP/1.1" 200 61
+"GET /profile/ HTTP/1.1" 200 23553
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 15080
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
