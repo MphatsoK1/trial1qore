@@ -9358,3 +9358,324 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /home/ HTTP/1.1" 200 15080
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+Watching for file changes with StatReloader
+"GET /home/ HTTP/1.1" 302 0
+"GET /login/?next=/home/ HTTP/1.1" 200 15560
+"GET /static/logo.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=%2Fhome%2F?next=/home/ HTTP/1.1" 200 3107
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"POST /accounts/google/login/?next=%2Fhome%2F?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=uGhx3gYaue6u5sbT&code=4%2F0Ab32j92nulVgAFPTJ-pmtdQITh0TV_Iv_T2Pwm-DLu3EMY8bzdcPqb1SJ_pABZtBXjRM-A&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none HTTP/1.1" 302 0
+"GET /home/?next=/home/ HTTP/1.1" 200 15080
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /profile/ HTTP/1.1" 200 24488
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /profile/ HTTP/1.1" 302 0
+"GET /login/?next=/profile/ HTTP/1.1" 200 15117
+"GET /static/logo.png HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /accounts/google/login/?next=%2Fprofile%2F?next=/home/ HTTP/1.1" 200 3107
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"POST /accounts/google/login/?next=%2Fprofile%2F?next=/home/ HTTP/1.1" 302 0
+"GET /accounts/google/login/callback/?state=KDz2ieSgnvUonIk2&code=4%2F0Ab32j90IJAYeys847T1lhJgk8vTNIrAVsHTnvzlWBsvEEiHCTPs7LY1_yxukVTIfuojwXQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none HTTP/1.1" 302 0
+"GET /profile/?next=/home/ HTTP/1.1" 200 23942
+"GET /static/avatars/4.svg HTTP/1.1" 304 0
+"GET /static/avatars/2.svg HTTP/1.1" 304 0
+"GET /static/avatars/1.svg HTTP/1.1" 304 0
+"GET /static/avatars/3.svg HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /profile/?next=/home/ HTTP/1.1" 200 23942
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 13794
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 7326
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /static/favicon/favicon.png HTTP/1.1" 404 1917
+"GET /admin/auth/user/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 4201
+"GET /profile/?next=/home/ HTTP/1.1" 302 0
+"GET /login/?next=/profile/%3Fnext%3D/home/ HTTP/1.1" 200 14847
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 15766
+"GET /static/logo.png HTTP/1.1" 304 0
+"POST /register/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 7366
+"GET /static/avatars/1.svg HTTP/1.1" 304 0
+"GET /static/avatars/2.svg HTTP/1.1" 304 0
+"GET /static/avatars/3.svg HTTP/1.1" 304 0
+"GET /static/avatars/4.svg HTTP/1.1" 304 0
+"POST /profile-setup/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 15076
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 23503
+"POST /profile/ HTTP/1.1" 200 61
+"GET /profile/ HTTP/1.1" 200 23503
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
+"GET /home/ HTTP/1.1" 200 15076
+Watching for file changes with StatReloader
+Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\views.py", line 745, in profile_view
+    response = render(request, 'profile.html', {
+        'user_stats': user_stats,
+    ...<2 lines>...
+        'edit_profile_form': edit_profile_form
+    })
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\Arkad\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'dividedby'
+"GET /profile/ HTTP/1.1" 500 246815
+"GET /home/ HTTP/1.1" 200 15076
+"GET /profile-setup/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 15076
+"GET /register/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 15076
+"GET /login/?next=/profile/%3Fnext%3D/home/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 15076
+"GET /accounts/google/login/?next=%2Fprofile%2F?next=/home/ HTTP/1.1" 200 3107
+"GET /accounts/google/login/?next=%2Fprofile%2F?next=/home/ HTTP/1.1" 200 3107
+"GET /login/?next=/profile/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 15076
+"GET /home/?next=/home/ HTTP/1.1" 200 15076
+"GET /accounts/google/login/?next=%2Fhome%2F?next=/home/ HTTP/1.1" 200 3107
+"GET /accounts/login/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 15076
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15542
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 15766
+"POST /register/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 7366
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /static/avatars/5.svg HTTP/1.1" 200 14779
+"GET /static/avatars/11.svg HTTP/1.1" 200 15127
+"GET /static/avatars/14.svg HTTP/1.1" 200 17417
+"GET /static/avatars/18.svg HTTP/1.1" 200 14237
+"GET /static/avatars/15.svg HTTP/1.1" 200 26343
+"GET /static/avatars/20.svg HTTP/1.1" 200 17147
+"GET /static/avatars/9.svg HTTP/1.1" 200 25027
+"GET /static/avatars/10.svg HTTP/1.1" 200 15483
+"GET /static/avatars/8.svg HTTP/1.1" 200 14944
+"GET /static/avatars/6.svg HTTP/1.1" 200 11877
+"GET /static/avatars/12.svg HTTP/1.1" 200 14462
+"GET /static/avatars/7.svg HTTP/1.1" 200 21964
+"GET /static/avatars/16.svg HTTP/1.1" 200 12557
+"GET /static/avatars/19.svg HTTP/1.1" 200 10485
+"GET /static/avatars/13.svg HTTP/1.1" 200 16391
+"GET /static/avatars/17.svg HTTP/1.1" 200 16745
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /register/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /login/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET / HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /profile-setup/ HTTP/1.1" 200 13834
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"GET /home/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13834
+"POST /profile-setup/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 15078
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 15319
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 15766
+"POST /register/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 14059
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /profile-setup/ HTTP/1.1" 200 13833
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 13833
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Arkad\OneDrive\Documents\WORK\Qore-AI\git\aphunzitsi_ai-main\core\forms.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 4201
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13683
+"GET / HTTP/1.1" 200 7326
+"GET /static/logo1.png HTTP/1.1" 304 0
+"GET /static/wel.png HTTP/1.1" 304 0
+"GET /static/geek-pride-day-concept-with-game-controller.png HTTP/1.1" 304 0
+"GET /static/winner-background-rendering.png HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /static/logo.png HTTP/1.1" 304 0
+"GET /static/manifest.json HTTP/1.1" 304 0
+"GET /static/favicon/android-chrome-192x192.png HTTP/1.1" 304 0
+"GET /static/favicon/favicon.png HTTP/1.1" 404 1917
+"GET /accounts/google/login/?next=/home/ HTTP/1.1" 200 3107
+"POST /accounts/google/login/?next=/home/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 14808
+"GET /register/ HTTP/1.1" 200 15766
+"POST /register/ HTTP/1.1" 302 0
+"GET /profile-setup/ HTTP/1.1" 200 18972
+"GET /static/avatars/1.svg HTTP/1.1" 304 0
+"GET /static/avatars/3.svg HTTP/1.1" 304 0
+"GET /static/avatars/2.svg HTTP/1.1" 304 0
+"GET /static/avatars/7.svg HTTP/1.1" 304 0
+"GET /static/avatars/8.svg HTTP/1.1" 304 0
+"GET /static/avatars/9.svg HTTP/1.1" 304 0
+"GET /static/avatars/5.svg HTTP/1.1" 304 0
+"GET /static/avatars/4.svg HTTP/1.1" 304 0
+"GET /static/avatars/11.svg HTTP/1.1" 304 0
+"GET /static/avatars/12.svg HTTP/1.1" 304 0
+"GET /static/avatars/10.svg HTTP/1.1" 304 0
+"GET /static/avatars/15.svg HTTP/1.1" 304 0
+"GET /static/avatars/14.svg HTTP/1.1" 304 0
+"GET /static/avatars/6.svg HTTP/1.1" 304 0
+"GET /static/avatars/13.svg HTTP/1.1" 304 0
+"GET /static/avatars/16.svg HTTP/1.1" 304 0
+"GET /static/avatars/17.svg HTTP/1.1" 304 0
+"GET /static/avatars/19.svg HTTP/1.1" 304 0
+"GET /static/avatars/18.svg HTTP/1.1" 304 0
+"GET /static/avatars/20.svg HTTP/1.1" 304 0
+"POST /profile-setup/ HTTP/1.1" 200 19141
+"POST /profile-setup/ HTTP/1.1" 200 19141
+"POST /profile-setup/ HTTP/1.1" 200 19141
+"POST /profile-setup/ HTTP/1.1" 302 0
+"GET /home/ HTTP/1.1" 200 15076
+"GET /static/Untitled-1.png HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 36606
+"POST /profile/ HTTP/1.1" 200 61
+"GET /profile/ HTTP/1.1" 200 36606
+"GET /static/favicon/favicon-32x32.png HTTP/1.1" 304 0
